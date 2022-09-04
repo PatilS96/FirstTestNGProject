@@ -21,6 +21,11 @@ public class VerifySingupTestCase extends BaseClass {
 		lpo.TryForFree().click();
 		
 		Thread.sleep(5000);
+		System.out.println(driver.getTitle());
+		String ActualTitle=driver.getTitle();
+		String ExpectedTitle=TestCaseData.ExpectedTitle;
+		CommonUtilities.HandleAssertions(ActualTitle, ExpectedTitle);
+		
 		SignupPageObject spo=new SignupPageObject(driver);
 		spo.FirstName().sendKeys(TestCaseData.firstname);
 		spo.LastName().sendKeys(TestCaseData.lastname);

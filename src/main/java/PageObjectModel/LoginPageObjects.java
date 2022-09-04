@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 public class LoginPageObjects {
 	
 	public WebDriver driver;
-	public String Expected="Please check your username and password. If you still can't log in, contact your Salesforce administrator.";
-	public String Actual=driver.findElement(By.xpath("//div[@id='error']")).getText();
 	private By username=By.xpath("//input[@id='username']");
 	private By password=By.xpath("//input[@id='password']");
 	private By LoginButton=By.xpath("//input[@id='Login']");
